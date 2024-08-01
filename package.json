@@ -1,0 +1,22 @@
+{
+  "name": "wordizer",
+  "version": "1.1.11",
+  "description": "A library for pluralizing and singularizing words in both English and Portuguese. It supports dynamic word transformations based on language-specific rules.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node wordizer.test.js"
+  },
+  "keywords": [
+    "wordizer",
+    "pt-br",
+    "en-us",
+    "pluralize",
+    "pluralize-ptbr",
+    "singularize",
+    "singularize-ptbr"
+  ],
+  "author": "Lucas Mordzin",
+  "license": "ISC",
+  "dependencies": {}
+}
