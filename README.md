@@ -32,10 +32,14 @@ const enSingular = singularize(enPlural, 'en') // -> apple
 // Portuguese
 const ptWord = 'maçã'
 const ptPlural = pluralize(word, 'pt') // -> maçãs
-const ptSingular = singularize(ptPlural, 'en') // -> maçã
+const ptSingular = singularize(ptPlural, 'pt') // -> maçã
 ```
 
 ## Contributing
+
+## Github Repository
+
+[Wordizer on GitHub](https://github.com/mordzin/wordizer)
 
 ### Adding New Languages
 
