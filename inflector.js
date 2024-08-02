@@ -80,6 +80,6 @@ export default (rules, uncountableRules, irregularRules) => {
       }
     })
 
-    return replaceWord(irregularPlurals, irregularSingles, ruleSet)(word)
+    return replaceWord(irregularSingles, irregularPlurals, ruleSet)(word)
   }
 }

@@ -11,35 +11,35 @@
 // 📄 Pluralization Rules
 
 export const pluralizationRules = [
-  [/(ão)$/i, '$1es'], // Ex: "cão" -> "cães"
-  [/(r|z)$/i, '$1es'], // Ex: "flor" -> "flores", "arroz" -> "arrozes"
-  [/(m)$/i, '$1ns'], // Ex: "homem" -> "homens"
-  [/(l)$/i, '$1is'], // Ex: "animal" -> "animais"
-  [/(s|x)$/i, '$1'], // Ex: "lápis" -> "lápis", "tórax" -> "tórax"
-  [/([aeiou])$/i, '$1s'], // Ex: "banana" -> "bananas", "carro" -> "carros"
-  [/ã$/i, 'ãs'], // Ex: "maçã" -> "maçãs"
-  [/el$/i, 'eis'], // Ex: "carrossel" -> "carrosseis"
-  [/il$/i, 'is'], // Ex: "fuzil" -> "fuzis"
-  [/ul$/i, 'uis'], // Ex: "azul" -> "azuis"
-  [/ol$/i, 'óis'], // Ex: "farol" -> "faróis"
-  [/al$/i, 'ais'], // Ex: "animal" -> "animais"
+  [/(ão)$/i, 'ões'],
+  [/(r|z)$/i, '$1es'],
+  [/(m)$/i, 'ns'],
+  [/(al)$/i, 'ais'],
+  [/(el)$/i, 'eis'],
+  [/(ol)$/i, 'óis'],
+  [/(ul)$/i, 'uis'],
+  [/(il)$/i, (match) => (match[0] === 'u' ? 'is' : 'eis')],
+  [/([aeiou])$/i, '$1s'],
+  [/s$/i, '$1'],
+  [/x$/i, '$1'],
+  [/ã$/i, 'ãs'],
 ]
 
 // ----------------------------------------------------
 // 📄 Singularization Rules
 
 export const singularizationRules = [
-  [/(ões|ães)$/i, 'ão'], // Ex: "cães" -> "cão"
-  [/ais$/i, 'al'], // Ex: "animais" -> "animal"
-  [/éis$/i, 'el'], // Ex: "carrosseis" -> "carrossel"
-  [/óis$/i, 'ol'], // Ex: "faróis" -> "farol"
-  [/is$/i, 'il'], // Ex: "fuzis" -> "fuzil"
-  [/zes$/i, 'z'], // Ex: "arrozes" -> "arroz"
-  [/(res|ses|les|nes)$/i, (match) => match.slice(0, -1)], // Ex: "flores" -> "flor"
-  [/(ais|eis|óis)$/i, (match) => match.slice(0, -1)], // Ex: "animais" -> "animal"
-  [/ns$/i, 'm'], // Ex: "homens" -> "homem"
-  [/s$/i, ''], // Ex: "bananas" -> "banana"
-  [/uis$/i, 'ul'], // Ex: "azuis" -> "azul"
+  [/(ões|ães)$/i, 'ão'],
+  [/ais$/i, 'al'],
+  [/éis$/i, 'el'],
+  [/óis$/i, 'ol'],
+  [/uis$/i, 'ul'],
+  [/(eis)$/i, 'el'],
+  [/is$/i, 'il'],
+  [/zes$/i, 'z'],
+  [/(res|ses|les|nes)$/i, (match) => match.slice(0, -1)],
+  [/ns$/i, 'm'],
+  [/s$/i, ''],
 ]
 
 // ----------------------------------------------------
