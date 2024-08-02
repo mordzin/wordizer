@@ -1,10 +1,12 @@
 /*
     ----------------------------------------------------
-    📄 PT-BR Rules
-    To create new languages
-    1. Create a lang folder, like en, pt, fr, etc
-    2. Copy this file to new folder and Set language rules
-    3. on index file, init inflactor with new Rules
+    📄 pt-BR Rules
+
+    To create new languages:
+
+    1. Create a folder for the new language, such as en, pt, fr, etc.
+    2. Copy this file to the new folder and set the language rules.
+    3. In the index file, initialize the inflector with the new rules.
 */
 
 // ----------------------------------------------------
