@@ -1,6 +1,6 @@
 {
   "name": "wordizer",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "A library for pluralizing and singularizing words in both English and Portuguese. It supports dynamic word transformations based on language-specific rules.",
   "main": "index.js",
   "type": "module",

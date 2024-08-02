@@ -23,21 +23,11 @@ wordizer provides functions to pluralize and singularize words for supported lan
 ```javascript
 import { pluralize, singularize } from 'wordizer'
 
-// English
-
-const enWord = 'apple'
-const enPlural = pluralize(word, 'en') // -> apples
-const enSingular = singularize(enPlural, 'en') // -> apple
-
-// Portuguese
-const ptWord = 'maçã'
-const ptPlural = pluralize(word, 'pt') // -> maçãs
-const ptSingular = singularize(ptPlural, 'pt') // -> maçã
+const plural = pluralize('apple', 'en') // -> apples
+const singular = singularize('apples', 'en') // -> apple
 ```
 
 ## Contributing
-
-## Github Repository
 
 [Wordizer on GitHub](https://github.com/mordzin/wordizer)
 
@@ -46,14 +36,17 @@ const ptSingular = singularize(ptPlural, 'pt') // -> maçã
 To add a new language to wordizer, follow these steps:
 
 1. Create a new directory for the language (e.g., `fr` for French) under the root directory.
-2. Inside the new directory, create a `rules` directory and add the following files:
-   - `irregular.js`
-   - `pluralization.js`
-   - `singularization.js`
-   - `uncountable.js`
-3. Populate these files with the appropriate rules for the new language.
+2. Inside the new directory, create a `rules.js` file and populate with the rules for the new language.
+
+- irregularRules: an object with irregular word transformations (e.g., { child: 'children' }).
+- pluralizationRules: an array of arrays with rules for pluralizing words (e.g., [['$', 's']]).
+- singularizationRules: an array of arrays with rules for singularizing words (e.g., [['s$', '']]).
+- uncountableRules: an array of uncountable words (e.g., ['sheep', 'fish']).
+
 4. Create `index.js` file in the new language directory.
-5. Initialize the inflector with the rules in `index.js`:
+5. Initialize the inflector with the rules in the `index.js` file.
+
+Here is an example of adding French to wordizer:
 
 ```javascript
 import inflector from '../inflector.js'
@@ -81,14 +74,11 @@ export const singularize = inflector(
 
 ```javascript
 import { pluralize as enPluralize, singularize as enSingularize } from './en'
-import { pluralize as ptPluralize, singularize as ptSingularize } from './pt'
 
 // ----------------------------------------------------
 // Import the new language
 
 import { pluralize as frPluralize, singularize as frSingularize } from './fr'
-
-// ----------------------------------------------------
 
 export const wordizer = {
   en: {
@@ -106,7 +96,6 @@ export const wordizer = {
     pluralize: frPluralize,
     singularize: frSingularize,
   },
-  // -------------------------------------------------
 }
 
 export const pluralize = (word, lang) => {

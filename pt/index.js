@@ -5,7 +5,7 @@ import {
   singularizationRules,
   uncountableRules,
   irregularRules,
-} from './rules/index.js'
+} from './rules.js'
 
 export const pluralize = inflector(
   pluralizationRules,

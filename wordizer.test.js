@@ -6,8 +6,8 @@ const testWords = {
     plural: ['apples', 'bananas', 'oranges', 'strawberries', 'grapes'],
   },
   pt: {
-    singular: ['maçã', 'banana', 'laranja', 'morango', 'uva'],
-    plural: ['maçãs', 'bananas', 'laranjas', 'morangos', 'uvas'],
+    singular: ['maçã', 'banana', 'laranja', 'morango', 'uva', 'carrossel'],
+    plural: ['maçãs', 'bananas', 'laranjas', 'morangos', 'uvas', 'carrosseis'],
   },
 }
 
