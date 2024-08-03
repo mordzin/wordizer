@@ -12,7 +12,7 @@
 // ----------------------------------------------------
 // 📄 Pluralization Rules
 
-export const pluralizationRules = [
+export const pluralization = [
   [/(ão)$/i, 'ões'],
   [/(r|z)$/i, '$1es'],
   [/(m)$/i, 'ns'],
@@ -30,7 +30,7 @@ export const pluralizationRules = [
 // ----------------------------------------------------
 // 📄 Singularization Rules
 
-export const singularizationRules = [
+export const singularization = [
   [/(ões|ães)$/i, 'ão'],
   [/ais$/i, 'al'],
   [/éis$/i, 'el'],
@@ -47,7 +47,7 @@ export const singularizationRules = [
 // ----------------------------------------------------
 // 📄 Uncountable Rules
 
-export const uncountableRules = [
+export const uncountable = [
   /tórax/i,
   /lápis/i,
   /ônibus/i,
@@ -59,7 +59,7 @@ export const uncountableRules = [
 // ----------------------------------------------------
 // 📄 Irregular Rules
 
-export const irregularRules = [
+export const irregular = [
   ['cão', 'cães'],
   ['pão', 'pães'],
   ['mão', 'mãos'],

@@ -1,24 +1,11 @@
 import inflector from '../inflector.js'
 
 import {
-  pluralizationRules,
-  singularizationRules,
-  uncountableRules,
-  irregularRules,
+  pluralization,
+  singularization,
+  uncountable,
+  irregular,
 } from './rules.js'
 
-export const pluralize = inflector(
-  pluralizationRules,
-  uncountableRules,
-  irregularRules
-)
-export const singularize = inflector(
-  singularizationRules,
-  uncountableRules,
-  irregularRules
-)
-
-export const en = { pluralize, singularize }
-
-export const singularizeEn = singularize
-export const pluralizeEn = pluralize
+export const pluralizeEn = inflector(pluralization, uncountable, irregular)
+export const singularizeEn = inflector(singularization, uncountable, irregular)

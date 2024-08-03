@@ -12,7 +12,7 @@
 // ----------------------------------------------------
 // 📄 Pluralization Rules
 
-export const pluralizationRules = [
+export const pluralization = [
   [/s?$/i, 's'],
   [/[^\u0000-\u007F]$/i, '$0'],
   [/([^aeiou]ese)$/i, '$1'],
@@ -52,7 +52,7 @@ export const pluralizationRules = [
 // ----------------------------------------------------
 // 📄 Singularization Rules
 
-export const singularizationRules = [
+export const singularization = [
   [/s$/i, ''],
   [/(ss)$/i, '$1'],
   [/(wi|kni|(?:after|half|high|low|mid|non|night|[^\w]|^)li)ves$/i, '$1fe'],
@@ -99,7 +99,7 @@ export const singularizationRules = [
 // ----------------------------------------------------
 // 📄 Irregular Rules
 
-export const irregularRules = [
+export const irregular = [
   // Pronouns.
   ['I', 'we'],
   ['me', 'us'],
@@ -157,7 +157,7 @@ export const irregularRules = [
 // ----------------------------------------------------
 // 📄 Uncountable Rules
 
-export const uncountableRules = [
+export const uncountable = [
   'adulthood',
   'advice',
   'agenda',

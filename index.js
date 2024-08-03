@@ -1,29 +1,28 @@
-import {
-  pluralize as enPluralize,
-  singularize as enSingularize,
-} from './en/index.js'
+import { pluralizeEn, singularizeEn } from './en/index.js'
+import { pluralizePt, singularizePt } from './pt/index.js'
 
-import {
-  pluralize as ptPluralize,
-  singularize as ptSingularize,
-} from './pt/index.js'
-
+// ----------------------------------------------------
 export const wordizer = {
   en: {
-    pluralize: enPluralize,
-    singularize: enSingularize,
+    pluralize: pluralizeEn,
+    singularize: singularizeEn,
   },
   pt: {
-    pluralize: ptPluralize,
-    singularize: ptSingularize,
+    pluralize: pluralizePt,
+    singularize: singularizePt,
   },
 }
+
+// ----------------------------------------------------
 
 export const pluralize = (word, lang) => {
   return wordizer[lang].pluralize(word)
 }
+
 export const singularize = (word, lang) => {
   return wordizer[lang].singularize(word)
 }
 
-export { enPluralize, enSingularize, ptPluralize, ptSingularize }
+// ----------------------------------------------------
+
+export { pluralizeEn, singularizeEn, pluralizePt, singularizePt }
